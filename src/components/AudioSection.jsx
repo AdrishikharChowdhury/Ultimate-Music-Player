@@ -110,7 +110,7 @@ const AudioSection = ({
   }, [audio, selected]);
 
   return (
-    <div className="w-2/3 min-w-0 border-2 shadow-2xl border-white bg-slate-700 h-full rounded-2xl flex flex-col justify-start gap-4 items-start p-5">
+    <div className="lg:w-2/3 w-full min-w-0 border-2 shadow-2xl border-white bg-slate-700 h-full rounded-2xl flex flex-col justify-start gap-4 items-start p-5">
       <AudioPicture
         selected={selected}
         isPlaying={isPlaying}

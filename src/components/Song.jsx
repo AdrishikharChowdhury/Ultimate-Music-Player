@@ -4,9 +4,11 @@ const Song = ({ onClick, music }) => {
   return (
     <div
       onClick={onClick}
-      className="p-6 cursor-pointer text-xl text-white flex justify-start items-center bg-slate-950 rounded-2xl shadow-2xl border-2 active:scale-90 transition-all duration-100"
+      className="w-full font-semibold text-center lg:p-6 p-8 cursor-pointer lg:text-xl text-lg text-white flex justify-start items-center bg-slate-950 rounded-2xl shadow-2xl border-2 active-scale-90 transition-all duration-100"
     >
-      {music.id}. {music.name}
+      <p className="truncate">
+        {music.id}. {music.name}
+      </p>
     </div>
   );
 };

@@ -67,7 +67,7 @@ const Player = () => {
 
   return (
     <div className="relative z-10 w-full h-full flex gap-5 flex-col justify-center items-center">
-      <div className="p-5 w-5/6 h-2/3 bg-slate-800 rounded-2xl shadow-2xl border-2 border-white flex justify-start gap-5 items-center">
+      <div className="p-5 lg:w-5/6 w-full lg:h-2/3 h-full bg-slate-800 rounded-2xl shadow-2xl border-2 border-white flex lg:flex-row flex-col justify-start gap-5 items-center">
         <AudioSection
           handleBack={handleBack}
           handleForward={handleForward}

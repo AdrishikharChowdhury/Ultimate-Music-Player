@@ -7,7 +7,7 @@ const AudioPicture = ({ src, selected, isPlaying,opacity }) => {
         src={src}
         style={{ opacity: opacity, transition: "opacity 0.5s ease-in-out" }}
         className={`${
-          selected ? "size-60" : "size-100"
+          selected ? "size-60" : "lg:size-90 md:size-80 sm:size-60 size-50"
         } rounded-full animate-[spin_10s_linear_infinite] ${
           selected
             ? isPlaying
