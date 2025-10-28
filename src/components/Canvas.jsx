@@ -67,7 +67,7 @@ const Canvas = ({ children }) => {
   }, []);
 
   return (
-    <div className="relative w-full h-screen p-4">
+    <div className="relative flex justify-center items-center w-full min-h-screen p-4">
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
       {children}
     </div>

@@ -110,7 +110,7 @@ const AudioSection = ({
   }, [audio, selected]);
 
   return (
-    <div className="lg:w-2/3 w-full min-w-0 border-2 shadow-2xl border-white bg-slate-700 h-full rounded-2xl flex flex-col justify-start gap-4 items-start p-5">
+    <div className="lg:w-2/3 w-full min-w-0 border-2 shadow-2xl border-white bg-slate-700 lg:h-full h-3/4 rounded-2xl flex flex-col justify-start gap-4 items-start p-5">
       <AudioPicture
         selected={selected}
         isPlaying={isPlaying}
@@ -120,7 +120,7 @@ const AudioSection = ({
 
       {selected && (
         <>
-          <div className="bg-slate-900 w-full p-5 text-xl text-white truncate font-semibold text-center rounded-2xl border-2">
+          <div className="bg-slate-900 w-full lg:p-5 p-4 text-xl text-white truncate font-semibold text-center rounded-2xl border-2">
             {name}
           </div>
           <audio
@@ -131,8 +131,8 @@ const AudioSection = ({
             autoPlay
           ></audio>
           {duration > 0 && (
-            <div className="w-full border-2 border-white flex bg-slate-900 rounded-2xl p-5 justify-center items-center gap-5">
-              <p className="text-xl text-white font-semibold text-left">
+            <div className="w-full border-2 border-white flex bg-slate-900 rounded-2xl lg:p-5 p-4 justify-center items-center gap-5">
+              <p className="lg:text-xl text-sm text-white font-semibold text-left">
                 {formatDuration(currentTime)}
               </p>
               <input
@@ -144,48 +144,48 @@ const AudioSection = ({
                 id=""
                 className="text-white w-full"
               />
-              <p className="text-xl text-white font-semibold text-right">
+              <p className="lg:text-xl text-sm text-white font-semibold text-right">
                 {formatDuration(duration)}
               </p>
             </div>
           )}
-          <div className="w-full flex gap-5 justify-center items-center">
+          <div className="w-full flex sm:gap-5 justify-evenly items-center">
             <button onClick={()=>{
               setrepeat(prev=>!prev)
               setshuffle(false)
-            }} className={`text-2xl text-white p-4 cursor-pointer ${repeat ? "bg-slate-700":"bg-slate-900"}  rounded-full border-2 active:scale-90 transition-all duration-100`}>
-              <Repeat1 />
+            }} className={`text-2xl text-white lg:p-4 p-3 cursor-pointer ${repeat ? "bg-slate-700":"bg-slate-900"}  rounded-full border-2 active:scale-90 transition-all duration-100`}>
+              <Repeat1 className="lg:size-6 size-5" />
             </button>
             <button
               onClick={handleBack}
-              className="text-2xl text-white p-4 cursor-pointer bg-slate-900 rounded-full border-2 active:scale-90 transition-all duration-100"
+              className="text-2xl text-white lg:p-4 p-3 cursor-pointer bg-slate-900 rounded-full border-2 active:scale-90 transition-all duration-100"
             >
-              <SkipBack className="size-10" />
+              <SkipBack className="lg:size-6 size-4"  />
             </button>
             <button
               onClick={handlePlay}
-              className="text-2xl text-white p-4 cursor-pointer bg-slate-900 rounded-full border-2 active:scale-90 transition-all duration-100"
+              className="text-2xl text-white lg:p-4 p-3 cursor-pointer bg-slate-900 rounded-full border-2 active:scale-90 transition-all duration-100"
             >
               {isPlaying ? (
-                <Pause className="size-10" />
+                <Pause className="lg:size-6 size-4" />
               ) : (
-                <Play className="size-10" />
+                <Play className="lg:size-6 size-4" />
               )}
             </button>
             <button
               onClick={handleForward}
-              className="text-2xl text-white p-4 cursor-pointer bg-slate-900 rounded-full border-2 active:scale-90 transition-all duration-100"
+              className="text-2xl text-white lg:p-4 p-3 cursor-pointer bg-slate-900 rounded-full border-2 active:scale-90 transition-all duration-100"
             >
-              <SkipForward className="size-10" />
+              <SkipForward className="lg:size-6 size-4" />
             </button>
             <button
               onClick={() => {
                 setshuffle((prev) => !prev);
                 setrepeat(false)
               }}
-              className={`text-2xl text-white p-4 cursor-pointer ${shuffle ? "bg-slate-700":"bg-slate-900"}  rounded-full border-2 active:scale-90 transition-all duration-100`}
+              className={`text-2xl text-white lg:p-4 p-2 cursor-pointer ${shuffle ? "bg-slate-700":"bg-slate-900"}  rounded-full border-2 active:scale-90 transition-all duration-100`}
             >
-              <Shuffle />
+              <Shuffle className="lg:size-6 size-4" />
             </button>
           </div>
         </>

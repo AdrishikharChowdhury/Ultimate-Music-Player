@@ -32,7 +32,7 @@ const UploadSong = () => {
     };
 
     return (
-        <div className="absolute text-white text-2xl lg:bottom-1/4 bottom-1/10 right-1/7 translate-x-1/2 translate-y-1/2">
+        <div className="absolute text-white text-2xl lg:bottom-1/8 bottom-1/15 lg:right-1/18 right-1/8 translate-x-1/2 translate-y-1/2">
             <label
                 className="z-90 w-16 h-16 bg-slate-950 relative cursor-pointer flex items-center justify-center rounded-full border-4 border-gray-400 hover:bg-gray-800 transition-all duration-300"
                 htmlFor="music"

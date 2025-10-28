@@ -7,7 +7,7 @@ const UploadSection = ({ handleSelect }) => {
   const { musics } = useContext(MusicContext);
 
   return (
-        <div className="w-full border-2 overflow-y-scroll border-white shadow-2xl bg-slate-700 h-full rounded-2xl flex flex-col justify-start items-satrt gap-4 p-5">
+        <div className="w-full border-2 border-white shadow-2xl overflow-y-scroll bg-slate-700 h-full rounded-2xl flex flex-col justify-start items-start gap-4 p-5">
       {musics.map((music, idx) => (
         <Song
           key={idx}
