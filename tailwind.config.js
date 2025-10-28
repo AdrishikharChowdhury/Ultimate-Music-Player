@@ -1,0 +1,26 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      keyframes: {
+        rotate: {
+          '0%, 100%': { transform: 'rotate(0deg) scale(1.2)' },
+          '50%': { transform: 'scale(0.9) rotate(180deg)' },
+        },
+        spin: {
+          'from': { transform: 'rotate(0deg)' },
+          'to': { transform: 'rotate(360deg)' },
+        }
+      },
+      animation: {
+        rotate: 'rotate 4s cubic-bezier(0.2, 0.8, 0.2, 1) infinite',
+        spin: 'spin 1s linear infinite',
+      },
+    },
+  },
+  plugins: [],
+}
