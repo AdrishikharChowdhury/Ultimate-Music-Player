@@ -80,3 +80,20 @@ export const getAllSongs = () => {
         };
     });
 };
+
+export const deleteSong = (id) => {
+  return new Promise(async (resolve, reject) => {
+    const db = await openDB();
+    const transaction = db.transaction([STORE_NAME], 'readwrite');
+    const store = transaction.objectStore(STORE_NAME);
+    const request = store.delete(id);
+
+    request.onsuccess = () => {
+      resolve();
+    };
+
+    request.onerror = (event) => {
+      reject('Error deleting song');
+    };
+  });
+};

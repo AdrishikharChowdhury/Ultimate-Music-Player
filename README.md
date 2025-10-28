@@ -9,6 +9,7 @@ Welcome to the Ultimate Music Player! 🎧✨ A sleek, modern, and feature-rich 
 *   **Mesmerizing Visualizer:** Watch your music come to life with a dynamic canvas visualizer that dances to the beat. 🎨
 *   **Upload Your Jams:** Have your own tracks? Upload them directly to the player! 📤
 *   **Persistent Playlist:** Your uploaded songs are saved locally in your browser using IndexedDB, so they're always there for you. 💾
+*   **Manage Your Music:** Easily delete uploaded songs from your playlist and local storage. 🗑️
 *   **Shuffle Mode:** Don't know what to listen to? Let fate decide with the shuffle feature! 🔀
 *   **Responsive & Beautiful:** Enjoy a flawless experience on any device, thanks to Tailwind CSS. 📱💻
 
